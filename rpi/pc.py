@@ -6,7 +6,7 @@ import sys
 class PcConnector(object):
 
         def __init__(self):
-                self.tcp_ip = "192.168.5.5" # RPI IP address
+                self.tcp_ip = "192.168.9.9" # RPI IP address
                 self.port = 5182
                 self.conn = None
                 self.client = None
