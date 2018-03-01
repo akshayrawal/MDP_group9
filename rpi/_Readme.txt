@@ -3,20 +3,15 @@ Network drive: pi
 password: raspberry
 
 WIFI NETWORK:
-Raspberry Pi 1:
-Network name: MdpGrp05 
-password:     raspberry05
-Raspberry Pi 2:
-Network name: MdpGrpTest05 
-password:     raspberry05
+Network name: MDPGrp9 
+password:     akshay2018
 
 
-MDPGrpTest05					MDPGrp05							
-------                          -------
-rpi address: 192.168.5.5		rpi address: 192.168.5.1
-range start: 192.168.5.5		range start: 192.168.5.1
-range end  : 192.168.5.60		range end  : 192.168.5.60
-
+MDPGrp9												
+------                          
+rpi address: 192.168.9.9		
+range start: 192.168.9.1		
+range end  : 192.168.9.20	
 
 PC
 --------
@@ -32,5 +27,18 @@ subprocess.Popen(['sh','./blueReset.sh'])
 sudo python blueReset.sh 
 ------------------------------
 sudo rfcomm release 4
-sudo hciconfig hci0 piscan
+
+**Make RPi visible to bluetooth device**
 ------------------------------
+sudo hciconfig hci0 piscan
+
+**Listen for connections on channel 4**
+------------------------------
+sudo rfcomm listen /dev/rfcomm4 4
+
+
+Minicom
+------------------------------
+**open minicom interface**
+minicom
+
