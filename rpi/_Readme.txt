@@ -39,6 +39,11 @@ sudo rfcomm listen /dev/rfcomm4 4
 
 Minicom
 ------------------------------
+**settings**
+Serial device : /dev/rfcomm4
 **open minicom interface**
 minicom
+**update minicom settings**
+(sudo) minicom -s -> Serial port setup ->  Press 'A' -> /dev/ttyACM0 (for serial port)
+						     -> /dev/rfcomm4 (for bluetooth)
 
