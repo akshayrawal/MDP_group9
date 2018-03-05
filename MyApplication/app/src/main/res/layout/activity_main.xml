@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.example.myapplication.ExpandableGridView
+            android:id="@+id/arena_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="20"
+            android:verticalSpacing="1dp"
+            android:horizontalSpacing="1dp"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:id="@+id/left_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Robot Status: "
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/robotstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Disconnected"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/x_coord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="X: "
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/x_text"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/y_coord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Y: "
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/y_text"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/set_coord_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80px"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/btn_gray"
+                        android:padding="5dp"
+                        android:text="Set Coordinates"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Auto Update Map: "
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ToggleButton
+                        android:id="@+id/auto_update_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60px"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/btn_gray"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/refresh"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#000000"
+                        android:clickable="true"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/f1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60px"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/btn_green"
+                        android:text="F1"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff" />
+
+                    <Button
+                        android:id="@+id/f2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60px"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/btn_green"
+                        android:text="F2"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff" />
+
+                    <Button
+                        android:id="@+id/configure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60px"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/btn_green"
+                        android:text="configure"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/manual_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70px"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/btn_blue"
+                        android:text="Manual"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff" />
+
+                    <Button
+                        android:id="@+id/explore_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70px"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/btn_blue"
+                        android:text="Explore"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff" />
+
+
+                    <Button
+                        android:id="@+id/run_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70px"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/btn_blue"
+                        android:text="Run"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/control"
+                    android:layout_width="272dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <Button
+                        android:id="@+id/up_btn"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#000000"
+                        android:clickable="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/left_btn"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="45dp"
+                            android:background="#000000"
+                            android:clickable="true" />
+
+                        <Button
+                            android:id="@+id/ctr_btn"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="0dp"
+                            android:background="#000000"
+                            android:clickable="false" />
+
+                        <Button
+                            android:id="@+id/right_btn"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="0dp"
+                            android:background="#000000"
+                            android:clickable="true" />
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/down_btn"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#000000"
+                        android:clickable="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:id="@+id/right_layout"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:id="@+id/chatpanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/say"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter message to send" />
+
+                    <Button
+                        android:id="@+id/send"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Send" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chat Log: "
+                        android:layout_marginRight="5dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="388dp"
+                        android:background="@color/grey">
+
+                        <TextView
+                            android:id="@+id/chatmsg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </ScrollView>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.myapplication.MainActivity">
+
+    <item
+        android:id="@+id/connect_wifi"
+        android:icon="@drawable/ic_action_device_access_bluetooth_searching"
+        app:showAsAction="ifRoom"
+        android:title="@string/secure_connect"/>
+
+    <item
+        android:id="@+id/disconnect"
+        app:showAsAction="never"
+        android:title="disconnect"/>
+    <item
+        android:id="@+id/rst_btn"
+        app:showAsAction="never"
+        android:title="reset"/>
+
+
+</menu>
